@@ -26,4 +26,11 @@ public class Triangulo extends Figura {
     return 3 * base;
     }
     
+    @Override 
+    public boolean equals(Object obj){
+        Triangulo t = (Triangulo) obj;
+        return (this.altura == t.getAltura() && this.base == t.getBase());
+    }
+    
+    
 }

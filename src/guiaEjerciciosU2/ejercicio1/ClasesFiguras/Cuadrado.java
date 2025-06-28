@@ -26,5 +26,16 @@ public class Cuadrado extends Figura {
     }
     
     
+    @Override // Para poder mostrar mejor todo por consola
+    public String toString(){
+       return "El Area del Cuadrado es: " + calcularArea();
+    }
     
+   @Override
+    public boolean equals(Object obj) {
+    if (this == obj) {
+        return true;
+    }
+    return false;
+    }
 }
