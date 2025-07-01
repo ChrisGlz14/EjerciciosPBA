@@ -45,7 +45,7 @@ public class mainU4 {
                     int notaTP = sc.nextInt();
                     
                     Alumno a = new Alumno(nombre, notaTP, numeroLegajo);
-                    cursoPBA.matriculaAlumno(a);
+                    cursoPBA.matriculaAlumnoforEach(a);
                     break;
                 case 2:
                     System.out.println("Eliminar Alumno por legajo seleccionado");
@@ -68,6 +68,9 @@ public class mainU4 {
                     cursoPBA.listar();
                     
                     break;
+                case 5: 
+                    System.out.println("Mostrar lista de alumnos Aprobados");
+                    cursoPBA.listarAprobados();
                 case 0:
                     System.out.println("Saliendo del programa...");
                     break;

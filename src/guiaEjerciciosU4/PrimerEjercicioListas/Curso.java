@@ -36,6 +36,20 @@ public class Curso {
         System.out.println("Alumno matriculado correctamente.");
     }
 }
+   
+   //En esta parte pruebo a usar el bucle for each aprendido en la clase del 12/06
+   public void matriculaAlumnoforEach(Alumno a){
+       //Con el buble for debeberia recorrer toda la lista previamente, en este caso con bucle for each no.
+       
+       for(Alumno alumno : alumnos) {
+           if(a.getLegajo() == alumno.getLegajo()){
+               System.out.println("El alumno despues del bucle for each, fue encontrado!!!");
+               return;
+           }
+       }
+            alumnos.add(a);
+            System.out.println("No se encontro un alumno con ese numero de legajo, agregado exitosamente!");
+   }
 
    
    public void desmatriculaAlumno(Alumno a){
@@ -84,7 +98,11 @@ public class Curso {
    
    
    
-   
+   public void listarAprobados(){
+       for(Alumno alumno : alumnos){
+           if(alumno.getNotaTp1() >= 6) System.out.println("Alumno: " + alumno.getNombre() + " - Aprobado con: " + alumno.getNotaTp1());
+       }
+   }
    
    
    public void listar(){
